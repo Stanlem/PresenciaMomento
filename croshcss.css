@@ -1,4 +1,6 @@
 * {
+    display: inline;
     font: 18px monospace;
-    color: red;
+    margin: 40px;
+    background: orange;
 }
