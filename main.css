@@ -1,0 +1,84 @@
+::-webkit-scrollbar {
+    display: none;
+}
+::-moz-scrollbar {
+    display: none;
+
+}
+body {
+    width: auto;
+    background: black;
+}
+
+.pm {
+    border: 3px solid white;
+    padding: 15px orange;
+    position: fixed;
+    top: 32px;
+    left: 30px;
+    border-radius: 60px;
+    transition: transform 0.5s ease-in-out 0s,
+                      border-radius 0.5s ease-in-out 0s;
+}
+.pm:hover {
+    transform: translateY(-20px) translateX(-15px) scaleX(1.2) scaleY(1.2);
+    border-radius: 10px;
+}
+
+.Inicio article {
+    color: white;
+    grid-area: article;
+    text-align: justify;
+}
+.Inicio {
+    font: 1.5em monospace;
+    padding: 30px;
+    grid-area: inicio;
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    ". article"
+    ". article";
+}
+
+.Ensamble {
+    grid-area: ensamble;
+    display: grid;
+    background-color: orange;
+}
+
+.Copallis {
+    grid-area: copallis;
+    display: grid;
+}
+
+.Tienda {
+    grid-area: tienda;
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Biblioteca {
+    grid-area: biblio;
+    display: grid;
+    background-color:  rgba(12,112,122, 1);
+}
+
+.Contacto {
+    grid-area: contacto;
+    display: grid;
+}
+
+.Lienzo {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 700px 700px 700px 700px 700px 700px;
+    grid-template-areas:
+    "inicio"
+    "ensamble"
+    "coppalis"
+    "tienda"
+    "biblio"
+    "contacto";
+}
