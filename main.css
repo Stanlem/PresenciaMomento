@@ -1,13 +1,11 @@
 ::-webkit-scrollbar {
-    display: none;
+    display: none
 }
-::-moz-scrollbar {
-    display: none;
 
-}
 body {
-    width: auto;
-    background: black;
+    width: 100%;
+    overflow: scroll;
+    overflow-X: hidden;
 }
 
 .pm {
@@ -17,46 +15,76 @@ body {
     top: 32px;
     left: 30px;
     border-radius: 60px;
-    transition: transform 0.5s ease-in-out 0s,
-                      border-radius 0.5s ease-in-out 0s;
+    transition: all 0.3s ease-out;
 }
 .pm:hover {
-    transform: translateY(-20px) translateX(-15px) scaleX(1.2) scaleY(1.2);
-    border-radius: 10px;
+    transform: scale(1.5) rotate(10deg);
 }
 
-.Inicio article {
-    color: white;
-    grid-area: article;
-    text-align: justify;
+.gif {
+    grid-area: gif;
+    align-self: center;
+    justify-self: center;
+}
+.cabezagif {
+    grid-area: cabeza;
+    font: 2.4em monospace;
+    text-align: center;
+}
+.piegif {
+    grid-area: pie;
+    justify-self: center;
+    font: 2.4em monospace;
 }
 .Inicio {
+    background-color: rgba(0, 0, 0, 1);
     font: 1.5em monospace;
+    color: white;
     padding: 30px;
     grid-area: inicio;
     display: grid;
-    grid-template-columns: 2fr 6fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 5fr;
     grid-template-areas:
-    ". article"
-    ". article";
+    ". cabeza"
+    ". gif"
+    ". pie";
 }
 
+.segpiel {
+    grid-area: segpiel;
+    align-self: start;
+}
+.imgpiedra {
+    grid-area: piedra;
+    justify-self: start;
+}
+.textoensamble {
+    
+}
 .Ensamble {
     grid-area: ensamble;
     display: grid;
-    background-color: orange;
+    /* background-color: #dfa614; */
+    background-color: black;
+    color: white;
+    grid-template-columns: 5% 45% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    ". segpiel  piedra"
+    ". . piedra"
+    ". . .";
 }
 
 .Copallis {
     grid-area: copallis;
     display: grid;
+    background-color: #ebeae7;
 }
 
 .Tienda {
     grid-area: tienda;
     display: grid;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 1);
 }
 
 .Biblioteca {
@@ -68,12 +96,13 @@ body {
 .Contacto {
     grid-area: contacto;
     display: grid;
+    background-color: rgba(255,255,255, 1);
 }
 
 .Lienzo {
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 700px 700px 700px 700px 700px 700px;
+    grid-template-columns: auto;
+    grid-template-rows: 725px 1750px 2175px 1450px 725px 725px;
     grid-template-areas:
     "inicio"
     "ensamble"

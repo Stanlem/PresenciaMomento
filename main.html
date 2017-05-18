@@ -7,9 +7,7 @@
 	<meta name="keywords" content="perfumes, perfumería, aceites esenciales, presenciamomento, 
 				       copal, copalli, cuerpo aromatico">    
 	<title>PresenciaMomento</title>
-	<!--             
-	     
-	     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	     
 	     El perfume no es una segunda piel.
 	     
@@ -22,33 +20,73 @@
 	     
 	     El código no se encuentra bajo ninguna licencia, es libre para quien 
 	     desee copiarlo, distribuirlo, optimizarlo, o simplemente estudiarlo.
+
 	     
-	     
-	     
-	   -->
-	
+	     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 	<link rel="stylesheet" href="main.css">
+	<script>
+	 $('a[href*=#]:not([href=#])').click(function() {
+	     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+		 || location.hostname == this.hostname) {
+
+		 var target = $(this.hash);
+		 target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		 if (target.length) {
+		     $('html,body').animate({
+			 scrollTop: target.offset().top
+		     }, 1000);
+		     return false;
+		 }
+	     }
+	 });
+	</script>
     </head>
     <body>
-	<a href=""><img class="pm" src="Downloads/presenciamomento/pm/simbolopmnaranja.png" width="120" height="120"></a>
+	<a href=""><img class="pm" src="presenciamomento/pm/simbolopmnaranja.png" width="120" height="120"></a>
 	<div  class="Lienzo">
-	    <div class="Inicio">
-		<article>
-		    <header><h1>PRESENCIAMOMENTO</h1></header>
-		    Ser consciente del olfato en nuestra construcción sensible inside en la manera tan propia que tenemos para arrojarnos a la vida; al eterno carnaval de esencias que es la calle, a los espacios con cuerpo, a los vacíos que los cuerpos deshabitaron. Entendiendo al cuerpo como un templo de percepciones donde la realidad, además de proyectarse, existe a partir de experiencias que entretejen los sentidos, busco colocar un estado de PresenciaMomento en el espacio personal, guiar hacia el retorno de la consciencia olfativa personal y colectiva en expansión, sensible y estética, dentro del contexto ciudad, donde otrxs cuerpxs exhalan la calidad de sus días, siendo el lugar donde nos mezclamos y, por un rato, somos esx otrx que confluye con <em>nuestra esencia</em>.
-		</article>
+	    <div class="Inicio" id="top">
+		<header class="cabezagif">
+		    Soy cambio, transformación,
+		</header>
+		<div class="gif"><img src="presenciamomento/gif1.gif" width="820" height="520"></div>
+		<footer class="piegif">
+		    Ser PresenciaMomento.
+		</footer>
 	    </div>
 	    <div class="Ensamble">
-		
-		Esto es el mentado Ensamble...
-		
+		<figure class="segpiel">
+		    <img src="presenciamomento/txtensamble.png" width="600" height="650">
+		</figure>
+		<figure class="imgpiedra"><img src="presenciamomento/ensamble.png" width="550" height="300">
+		    <figcaption>
+			Ser consciente del olfato en nuestra construcción</br> 
+			sensible incide en la manera 'tan propia' que</br>
+			tenemos para arrojarnos a la vida; al</br>
+			diario pestil y etéreo carnaval de olores que es</br> 
+			la calle, a los espacios con cuerpos,</br>
+			a los espacios vacíos que deshabitaron los cuerpos.</br> 
+			Casi se hace necesario un espacio sin olor,</br>
+			como si el perfume perfecto fuese silencio,</br>
+			y que recordara a nada, </br>
+			lo contrario a los olores, que crean, evocan</br> 
+			e inevitablemente invaden nuevas memorias.</br></br>
+			
+			Entendiendo al cuerpo como un Templo de percepciones,
+			<style>
+			    figcaption {
+				font: 1.1em "Courier New";
+				text-align: center;
+				line-height: 23px;
+			    }
+			</style>
+		    </figcaption>
+		</figure>
 	    </div>
 	    <div class="Copallis"></div>
 	    <div class="Tienda">
 		<div class="producto1"></div>
 		<div class="producto2"></div>
 		<div class="producto3"></div>
-		
 	    </div>
 	    <div class="Biblioteca"></div>
 	    <div class="Contacto"></div>
