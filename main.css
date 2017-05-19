@@ -4,6 +4,7 @@
 
 body {
     width: 100%;
+    background-color: black;
     overflow: scroll;
     overflow-X: hidden;
 }
@@ -58,21 +59,17 @@ body {
     grid-area: piedra;
     justify-self: start;
 }
-.textoensamble {
-    
-}
 .Ensamble {
     grid-area: ensamble;
     display: grid;
     /* background-color: #dfa614; */
     background-color: black;
     color: white;
-    grid-template-columns: 5% 45% 50%;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 10% 45% 45%;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
     ". segpiel  piedra"
-    ". . piedra"
-    ". . .";
+    ". segpiel piedra";
 }
 
 .Copallis {
@@ -101,6 +98,7 @@ body {
 
 .Lienzo {
     display: grid;
+    width: auto;
     grid-template-columns: auto;
     grid-template-rows: 725px 1750px 2175px 1450px 725px 725px;
     grid-template-areas:
