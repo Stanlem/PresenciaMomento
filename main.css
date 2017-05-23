@@ -125,15 +125,49 @@ span.gris {
     ". tdos .";
 }
 
+.copaluno {
+    grid-area: arbol;
+    justify-self: center;
+}
+.copaldos {
+    grid-area: texto;
+    overflow: scroll;
+    overflow-X: hidden;
+    padding: 15px;
+}
+.copaldos p {
+    width: 100%;
+    text-align: justify;
+}
+.copaldos h1 {
+    color: orange;
+    font: 2.5em monospace;
+    text-align: center;
+}
+.copaldos a img {
+    align-self: center;
+    justify-self: center;
+    transition: scale 0.5s ease-in-out 0.5s;
+}
+.copaldos img:hover {
+    transform: scale(2.2);
+}
 .Copallis {
     grid-area: copallis;
     display: grid;
+    grid-template-columns: 2fr 6fr 1fr;
+    grid-template-rows: 500px 200px;
+    grid-gap: 20px;
+    grid-gap: 15px;
+    grid-template-areas:
+    ". arbol ."
+    ". texto .";
 }
 
 .Tienda {
     grid-area: tienda;
     display: grid;
-    background-color: rgba(0, 0, 0, 1);
+        
 }
 
 .Biblioteca {
@@ -150,16 +184,17 @@ span.gris {
 
 .Lienzo {
     display: grid;
-    grid-template-columns: 2fr 5fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 725px 1750px 2175px 1450px 725px 725px;
     grid-template-areas:
-    ". inicio"
-    ". ensamble"
-    ". coppalis"
-    ". tienda"
-    ". biblio"
-    ". contacto";
+    "inicio"
+    "ensamble"
+    "copallis"
+    "tienda"
+    "biblio"
+    "contacto";
 }
+
 .Formulario iframe {
     width: 100%;
     height: 100%;
