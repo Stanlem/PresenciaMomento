@@ -192,7 +192,7 @@ span.gris {
     grid-template-rows: 300px 400px;
     grid-template-areas:
     "intro intro intro intro intro intro"
-    ". . . cblanco cnegro ."
+    ". cblanco cblanco cnegro cnegro .";
 }
 
 .Biblioteca {
