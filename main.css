@@ -1,25 +1,42 @@
-::-webkit-scrollbar {
-    display: none
+a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
 }
-
+ul {
+    font: 18px monospace;
+    line-height: 35px;
+}
 body {
     width: 100%;
-    background-color: black;
-    overflow: scroll;
-    overflow-X: hidden;
+    background: rgba(0, 0, 0, 1);
+    overflow: hidden;
 }
 
 .pm {
-    border: 3px solid white;
-    padding: 15px orange;
+    box-shadow: rgb(179, 179, 179) 7px -7px 1.5px; 
+    z-index: 1;
+    background: rgba(0, 0, 0, 1);
+    border: 3px rgba(0, 0, 0, 0.9);
     position: fixed;
-    top: 32px;
-    left: 30px;
+    top: 240px;
+    left: 97px;
     border-radius: 60px;
-    transition: all 0.3s ease-out;
 }
-.pm:hover {
-    transform: scale(1.5) rotate(10deg);
+.botella {
+    box-shadow: rgb(179, 179, 179) 7px -7px 1.5px;
+    background: rgba(0, 0, 0, 1);
+    border: 3px rgba(0, 0, 0, 0.9);
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top: 315px;
+    left: 35px;
+    border-radius: 50px;
+}
+.botella ul li:hover {
+    transform: scale(1.1);
+    color: orange;
 }
 
 .gif {
@@ -38,7 +55,6 @@ body {
     font: 2.4em monospace;
 }
 .Inicio {
-    background-color: rgba(0, 0, 0, 1);
     font: 1.5em monospace;
     color: white;
     padding: 30px;
@@ -53,29 +69,65 @@ body {
 
 .segpiel {
     grid-area: segpiel;
-    align-self: start;
+    justify-self: start;
+}
+.segpiel pre {
+    font: 1.6em "Courier New";
+}
+span.naranja {
+    color: orange;
+}
+span.gris {
+    color: rgb(38, 38, 38);
+}
+@keyframes blinker {  
+    50% { opacity: 0; }
+}
+#uno {
+    animation: blinker 4s ease 0s infinite;
+}
+#dos {
+    animation: blinker 4s ease 2s infinite;
+}
+#tres {
+    animation: blinker 4s ease 4s infinite;
+}
+#cuatro {
+    animation: blinker 4s ease 6s infinite;
+}
+#cinco {
+    animation: blinker 4s ease 8s infinite;
 }
 .imgpiedra {
     grid-area: piedra;
     justify-self: start;
 }
+#textodos {
+    grid-area: tdos;
+    align-self: start;
+    justify-self: start;
+}
+#textodos p {
+    text-align: left;
+    font: 27px "Courier New";
+    color: black;
+    background: orange;
+}
 .Ensamble {
     grid-area: ensamble;
     display: grid;
-    /* background-color: #dfa614; */
     background-color: black;
     color: white;
-    grid-template-columns: 10% 45% 45%;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 40% 60%;
     grid-template-areas:
-    ". segpiel  piedra"
-    ". segpiel piedra";
+    "segpiel piedra ."
+    ". tdos .";
 }
 
 .Copallis {
     grid-area: copallis;
     display: grid;
-    background-color: #ebeae7;
 }
 
 .Tienda {
@@ -93,19 +145,22 @@ body {
 .Contacto {
     grid-area: contacto;
     display: grid;
-    background-color: rgba(255,255,255, 1);
 }
+
 
 .Lienzo {
     display: grid;
-    width: auto;
-    grid-template-columns: auto;
+    grid-template-columns: 2fr 5fr;
     grid-template-rows: 725px 1750px 2175px 1450px 725px 725px;
     grid-template-areas:
-    "inicio"
-    "ensamble"
-    "coppalis"
-    "tienda"
-    "biblio"
-    "contacto";
+    ". inicio"
+    ". ensamble"
+    ". coppalis"
+    ". tienda"
+    ". biblio"
+    ". contacto";
+}
+.Formulario iframe {
+    width: 100%;
+    height: 100%;
 }
