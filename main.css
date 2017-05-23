@@ -38,6 +38,10 @@ body {
     transform: scale(1.1);
     color: orange;
 }
+a:active {
+    transform: scale(1.8);    
+}
+
 
 .gif {
     grid-area: gif;
@@ -125,57 +129,61 @@ span.gris {
     ". tdos .";
 }
 
-.copaluno {
+.Arbol {
     grid-area: arbol;
     justify-self: center;
 }
-.copaldos {
+.Arboltexto {
     grid-area: texto;
     overflow: scroll;
     overflow-X: hidden;
     padding: 15px;
+    justify-self: center;
 }
-.copaldos p {
+.Arboltexto p {
     width: 100%;
     text-align: justify;
 }
-.copaldos h1 {
+.Arboltexto h1 {
     color: orange;
     font: 2.5em monospace;
     text-align: center;
 }
-.copaldos a img {
+#tonatiuh {
+    grid-area: tona;
     align-self: center;
     justify-self: center;
     transition: scale 0.5s ease-in-out 0.5s;
 }
-.copaldos img:hover {
+#tonatiuh:hover {
     transform: scale(2.2);
 }
 .Copallis {
     grid-area: copallis;
     display: grid;
     grid-template-columns: 2fr 6fr 1fr;
-    grid-template-rows: 500px 200px;
-    grid-gap: 20px;
-    grid-gap: 15px;
+    grid-template-rows: 500px 40px 150px;
+    grid-gap: 0px;
     grid-template-areas:
-    ". arbol ."
-    ". texto .";
+    ". arbol arbol"
+    ". tona tona"
+    ". texto texto";
 }
+
+
 .intro {
     grid-area: intro;
     justify-self: center;
 }
 .copalblanco {
     grid-area: cblanco;
-    justify-self: end;
     color: white;
+    align-self: end;
 }
 .copalnegro {
     grid-area: cnegro;
-    justify-self: start;
     color: white;
+    align-self: end;
 }
 .intro pre {
     font: 3.3em monospace;
@@ -185,14 +193,24 @@ span.gris {
 .intro pre strong {
     color: orange;
 }
+.copalblanco figcaption {
+    font: 1em monospace;
+    text-align: justify;
+    display: inline-block;
+}
+.copalnegro figcaption {
+    font: 1em monospace;
+    text-align: justify;
+    display: inline-block;
+}
 .Tienda {
     grid-area: tienda;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 300px 400px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 120px 300px;
     grid-template-areas:
-    "intro intro intro intro intro intro"
-    ". cblanco cblanco cnegro cnegro .";
+    "intro intro intro intro"
+    "cblanco cblanco cnegro cnegro";
 }
 
 .Biblioteca {
