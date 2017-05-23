@@ -163,11 +163,34 @@ span.gris {
     ". arbol ."
     ". texto .";
 }
-
+.intro {
+    grid-area: intro;
+    justify-self: center;
+}
+.copalblanco {
+    grid-area: cblanco;
+    justify-self: end;
+}
+.copalnegro {
+    grid-area: cnegro;
+    justify-self: start
+}
+.intro pre {
+    font: 3.3em monospace;
+    text-align: center;
+    color: white;
+}
+.intro pre strong {
+    color: orange;
+}
 .Tienda {
     grid-area: tienda;
     display: grid;
-        
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 400px;
+    grid-template-areas:
+    "intro intro intro intro intro intro"
+    "cblanco cblanco cblanco cnegro cnegro cnegro"
 }
 
 .Biblioteca {
